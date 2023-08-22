@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+</head>
+<body>
+	<input type="text" id="inp" />
+    <button id="btn">genarate</button>
+ <script>
+     const btn = document.getElementById('btn');
+     btn.onclick =()=>{
+         const inp = document.getElementById('inp').value.toString();
+         const utterance = new SpeechSynthesisUtterance(inp)
+         window.speechSynthesis.speak(utterance)
+     }
+ </script>
+</body>
+</html>
